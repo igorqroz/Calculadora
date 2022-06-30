@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .fundo {
+            background: rgb(115, 184, 230);
+            text-align: center;
+            height: 100vh;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .tec {
+            padding-top: 50px;
+        }
+
+        .calculadora {
+            position: absolute;
+            background-color: rgb(223, 104, 207);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        .botao {
+            width: 50px;
+            height: 50px;
+            margin: 3px;
+            font-size: 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background-color: gray;
+        }
+
+        #resultado {
+            width: 207px;
+            height: 30px;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 25px;
+            text-align: right;
+            color: black;
+            background-color: white;
+        }
+
+        .html {
+            padding: 10px;
+            width: 100px;
+            margin: auto;
+        }
+
+        .css {
+            padding: 10px;
+            width: 100px;
+            margin: auto;
+        }
+
+        .js {
+            padding: 10px;
+            width: 100px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fundo">
+        <h1 class="tec">Tecnologias:</h1>
+        <img src="img/icon-html-branco.png" alt="" class="html">
+        <img src="img/icon-css-branco.png" alt="" class="css">
+        <img src="img/icon-js-branco.png" alt="" class="js">
+        <div class="calculadora">
+            <h1>Calculadora</h1>
+            <p id="resultado"></p>
+            <table>
+                <tr>
+                    <td><button class="botao" style="background-color: rgb(238, 55, 55); color: white;"
+                            onclick="clean()">AC</button></td>
+                    <td><button class="botao" onclick="insert('%')">%</button></td>
+                    <td><button class="botao" onclick="insert('*')">x</button></td>
+                    <td><button class="botao" onclick="insert('/')">÷</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('7')">7</button></td>
+                    <td><button class="botao" onclick="insert('8')">8</button></td>
+                    <td><button class="botao" onclick="insert('9')">9</button></td>
+                    <td><button class="botao" onclick="insert('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('4')">4</button></td>
+                    <td><button class="botao" onclick="insert('5')">5</button></td>
+                    <td><button class="botao" onclick="insert('6')">6</button></td>
+                    <td><button class="botao" onclick="insert('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('1')">1</button></td>
+                    <td><button class="botao" onclick="insert('2')">2</button></td>
+                    <td><button class="botao" onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button class="botao"
+                            style="height: 106px; background-color: rgb(238, 184, 37); color: white;"
+                            onclick="calcular()">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="botao" style="width: 106px;" onclick="insert('0')">0</button></td>
+                    <td><button class="botao" onclick="insert(',')">,</button></td>
+                </tr>
+            </table>
+            <h3 style="padding: 10px; font-size: 25px;">By: Igor Qroz</h3>
+        </div>
+    </div>
+    <script>
+        function insert(num) {
+            var numero = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = numero + num
+
+        }
+        function clean() {
+            document.getElementById('resultado').innerHTML = "";
+        }
+        function calcular() {
+            var resultado = document.getElementById('resultado').innerHTML;
+            if (resultado) {
+                document.getElementById('resultado').innerHTML = eval(resultado);
+            } else {
+                document.getElementById('resultado').innerHTML = "Sem Valor"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
