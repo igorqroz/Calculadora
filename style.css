@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Digital';
+    src: url(fonts/DS-DIGIB.TTF) format('truetype');
+}
+
+@font-face {
+    font-family: 'Retro';
+    src: url(fonts/DIMIS___.TTF) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fundo {
+    background-image: url(https://i.pinimg.com/originals/2d/23/5f/2d235f733c7fd7553ff283646bdf5bd1.png);
+    text-align: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tec {
+    font-family: 'Retro', Helvetica, sans-serif;
+    padding-top: 50px;
+}
+
+.icon {}
+
+.calculadora {
+    position: absolute;
+    background-color: #e772d8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.botao {
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    font-size: 25px;
+    border: none;
+    border-color: white;
+    border-style: outset;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: rgb(184, 184, 184);
+}
+
+.ac {
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    font-size: 25px;
+    border: none;
+    background-color: rgb(238, 55, 55);
+    border-color: rgb(238, 55, 55);
+    border-style: outset;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.ac:hover {
+    background-color: rgb(206, 41, 41);
+}
+
+.igual {
+    width: 50px;
+    height: 106px;
+    margin: 3px;
+    font-size: 25px;
+    background-color: rgb(238, 184, 37);
+    border: none;
+    border-color: rgb(238, 184, 37);
+    border-style: outset;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.igual:hover {
+    background-color: rgb(196, 152, 31);
+}
+
+
+#resultado {
+    width: 207px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: inset;
+    border-color: rgb(223, 104, 207);
+    font-family: 'Digital', Helvetica, sans-serif;
+    font-size: 40px;
+    text-align: right;
+    color: black;
+    background-color: rgb(52, 187, 81);
+}
+
+.icon {
+    padding: 10px;
+    width: 100px;
+}
